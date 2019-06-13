@@ -53,7 +53,7 @@ Feel free to fork and edit. I'll add functionality as I use it more
  * assumes only 1 wifi adaptor is present
  * Interval should not be higher then 1 second. Wireshark will appear as if it's not switching channels because it does not have enough data to send typically in a longer interval
  * Same topic, it helps to increase wireshark data buffer and capture size
- * Commented out channels above 104. Even though my airport card supports some of them either the os or wireshark doesn't. ❔Does anyone know where this limitation sits? Just uncommment is you want ot try all channels.
+ * Commented out channels above 104. Even though my airport card supports some of them either the os or wireshark doesn't.   >❔Does anyone know where this limitation sits? Just uncommment is you want ot try all channels.
 
 ## How to use with Wireshark
 
