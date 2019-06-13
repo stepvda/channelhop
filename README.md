@@ -12,6 +12,7 @@ With this tool you can scan all networks in the area and not just those one one 
 
 ## functionality:
  * Uses the apple `airport` tool that comes standard with macos. This means that this tool is only useful for apple's wifi adaptors.
+ * verifies that wifi radio is on and will dissociate from any wifi network (which would keep the channel stuck to that ssid's channel)
  * Will test for the wifi card's capabilities by trying out each wifi channel to see which ones it can use.
  * Test result provides a list of wifi channels that is then used for wifi hopping 
  * For now hopping is pre-configured to occur every 0.5 second and this 5000 times. (press CTRL-C to exit)
