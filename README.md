@@ -58,7 +58,7 @@ Feel free to fork and edit. I'll add functionality as I use it more
 
  1. start wireshark (sudo is not needed)
  2. if you previously launched the script or did anything else with your airpor card turn it off and on again from the menu bar for instance. Sometimes wireshark will otherwise not receive any data.
- 3. start capturing data, default settings are fine normally with high enough buffer and capture****
+ 3. start capturing data, default settings are fine normally with high enough buffer and capture size.
  ![](lib/wireshark_intf_config.png)  
  4. launch the script from a terminal as __sudo__ by typing:  
  ````bash
