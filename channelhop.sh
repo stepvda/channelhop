@@ -60,7 +60,37 @@ list_channels () {
 }
 #list_channels
 
+#check if airport is on
+check_on () {
+  zsh -c "echo -en 'check: if airport radio is turned on...    \c'"
+  sleep 0.5
+  if [ `sudo airport -I | grep "AirPort: Off" | wc -l;` -eq 1 ] ; then 
+     zsh -c "echo -en '\rcheck: if airport radio is turned on. error: radio off. turn on radio and try again. exiting...     \c'"
+     exit
+     exit
+  else
+     zsh -c "echo -en '\rcheck: if airport radio is turned on. ok.     \c'"
+  fi
+  echo
+ 
+}
+check_on
 
+#desociate from any wifi network
+desos () {
+    zsh -c "echo -en '\rcheck: desociating from any wifi network....\c'"
+
+    if sudo airport -z; then
+        zsh -c "echo -en '\rcheck: desociating from any wifi network. ok.     \c'"
+    else 
+        zsh -c "echo -en '\rcheck: desociating from any wifi network. error ${res}. exiting...    \c'"
+        exit
+        exit
+    fi
+    #airpoecho
+    echo
+}
+desos
 
 declare -a testedChannels
 testedChannels=()
@@ -87,8 +117,8 @@ test_channels () {
         test_channel
     done
 
-    echo 
-    echo "Available channels: ${#testedChannels[@]}"
+    zsh -c "echo -en '\rtesting done. available channels: ${#testedChannels[@]}\c'"
+  #  echo "Available channels: ${#testedChannels[@]}"
     for elem in ${testedChannels[@]}; do
        zsh -c "echo -en '$elem \c'"
     done
