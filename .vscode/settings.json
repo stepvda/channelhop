@@ -1,0 +1,9 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "/Users/nstephane/Data/db/downloads.db",
+            "dialect": "SQLite",
+            "name": "downloads"
+        }
+    ]
+}

@@ -12,34 +12,6 @@ With this tool you can scan all networks in the area and not just those one one 
 
 ## functionality:
  * Uses the apple `airport` tool that comes standard with macos. This means that this tool is only useful for apple's wifi adapters.
- * verifies that wifi radio is on and will dissociate from any wifi network (which would keep the channel stuck to that ssid's channel)
- * Will test for the wifi card's capabilities by trying out each wifi channel to see which ones it can use.
- * Test result provides a list of wifi channels that is then used for wifi hopping 
- * For now hopping is pre-configured to occur every 0.5 second and this 5000 times. (press CTRL-C to exit)
-
-
-Feel free to fork and edit. I'll add functionality as I use it more
-
-## remarks:
- * script assumes network card is already in __monitor__ mode!!!
- * assumes only 1 wifi adapter is present
- * Interval should not be higher then 1 second. Wireshark will appear as if it's not switching channels because it does not have enough data to send typically in a longer interval
- * Same topic, it helps to increase wireshark data buffer and capture size
-
-## How to use with Wireshark
-
- 1. start wireshark (sudo is not needed)
- 2. if you previously launched the script or did anything else with your airport card turn it off and on again from the menu bar for instance. Sometimes wireshark will otherwise not receive any data.
- 3. start capturing data, default settings are fine normally with high enough buffer and capture:# channelhop
-Wifi channel hopping script for use with wireshark and other net pcap capture utilities. Designed for macos and apple airport network cards.
-
--initial version still bare bone. definitely no bells and wistles-
-
-What is it: script that will automatically change wifi channel while capturing data with a tool like Wireshark. This is quiet handy during initial discovery when you need to assess all the networks that are available.
-
-
-## functionality:
- * Uses the apple `airport` tool that comes standard with macos. This means that this tool is only useful for apple's wifi adapters.
  * Will test for the wifi card's capabilities by trying out each wifi channel to see which ones it can use.
  * Test result provides a list of wifi channels that is then used for wifi hopping 
  * For now hopping is pre-configured to occur every 0.5 second and this 5000 times. (press CTRL-C to exit)
@@ -57,6 +29,7 @@ Feel free to fork and edit. I'll add functionality as I use it more
  * Commented out channels above 104. Even though my airport card supports some of them either the os or wireshark doesn't.  
  
 >❔Does anyone know where this limitation sits? Just uncomment is you want ot try all channels.
+
 
 ## How to use with Wireshark
 
